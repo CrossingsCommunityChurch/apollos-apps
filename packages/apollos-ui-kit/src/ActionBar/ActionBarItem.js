@@ -21,6 +21,7 @@ const ActionBarItem = ({
   icon = 'empty',
   tint,
   size,
+  fontWeight,
   label = '',
   ...touchableProps
 }) => (
@@ -29,7 +30,7 @@ const ActionBarItem = ({
       <Icon fill={tint} size={size} name={icon} />
 
       {/* using stlye object here is just as efficient as creating a new styled component with prop, since UIText is already a styled component */}
-      <UIText style={{ color: tint }}>{label}</UIText>
+      <UIText style={{ color: tint, fontWeight }}>{label}</UIText>
     </ActionBarItemWrapper>
   </Touchable>
 );
@@ -38,6 +39,7 @@ ActionBarItem.propTypes = {
   icon: PropTypes.string,
   size: PropTypes.number,
   label: PropTypes.string,
+  fontWeight: PropTypes.string,
   tint: PropTypes.string,
 };
 
