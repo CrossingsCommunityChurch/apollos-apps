@@ -92,6 +92,7 @@ const FeatureFeedTabConnected = ({
   navigation,
   useTagFilter,
   feedViewProps,
+  additionalFeatures,
 }) => {
   const [filteredTags, setFilteredTags] = useState([]);
   const { data, loading, error } = useQuery(
@@ -125,6 +126,7 @@ const FeatureFeedTabConnected = ({
               featureFeedId={data?.tabFeedFeatures?.id}
               navigation={navigation}
               feedViewProps={feedViewProps}
+              additionalFeatures={additionalFeatures}
             />
           </BackgroundView>
         )}
