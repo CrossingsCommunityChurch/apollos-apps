@@ -9,6 +9,7 @@ const createModel = defineModel({
     originId: DataTypes.TEXT,
     originType: DataTypes.TEXT,
     approved: DataTypes.BOOLEAN,
+    isPublic: DataTypes.BOOLEAN,
     flagCount: DataTypes.INTEGER,
   },
   sequelizeOptions: {
